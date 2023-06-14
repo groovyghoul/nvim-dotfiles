@@ -2,6 +2,7 @@ return {
   {
     "glepnir/lspsaga.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
+    enabled = false,
     -- keymappings to add
     -- require("dapui").toggle(1)   --> this will toggle the left
     -- require("dapui").toggle(2)   --> this will toggle the bottom

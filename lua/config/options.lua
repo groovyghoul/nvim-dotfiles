@@ -14,5 +14,8 @@ end
 -- do not render markdown preview
 vim.cmd([[set conceallevel=0]])
 
+vim.diagnostic.config({
+  float = { border = "rounded" },
+})
 -- Disable virtual_text since it's redundant due to lsp_lines.
 -- vim.diagnostic.config({ virtual_text = false })
