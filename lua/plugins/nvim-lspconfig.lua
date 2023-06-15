@@ -26,6 +26,7 @@ return {
         -- this makes the "inline diagnostics" no longer appear beside the line (also see options.lua). Using lsp-lines now, instead
         -- virtual_text = false,
         virtual_text = true,
+        virtual_lines = false,
       },
     },
   },
