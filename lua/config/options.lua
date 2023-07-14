@@ -19,3 +19,9 @@ vim.diagnostic.config({
 })
 -- Disable virtual_text since it's redundant due to lsp_lines.
 -- vim.diagnostic.config({ virtual_text = false })
+
+-- place this after colorscheme is set
+local hl_groups = { "DiagnosticUnderlineError" }
+for _, hl in ipairs(hl_groups) do
+  vim.cmd.highlight(hl .. " gui=undercurl")
+end
