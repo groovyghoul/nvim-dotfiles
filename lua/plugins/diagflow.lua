@@ -1,6 +1,8 @@
 return {
   {
     "dgagn/diagflow.nvim",
-    opts = {},
+    opts = {
+      padding_right = 3,
+    },
   },
 }
