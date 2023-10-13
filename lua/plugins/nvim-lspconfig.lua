@@ -36,6 +36,7 @@ return {
         csharp_ls = function(_, opts)
           require("lspconfig").csharp_ls.setup({
             root_dir = require("lspconfig.util").root_pattern("*.sln", ".git", "*.csproj"),
+            handlers = handlers,
           })
           return true
         end,
@@ -113,6 +114,21 @@ return {
       diagnostics = {
         virtual_text = false,
         virtual_lines = false,
+        float = { border = border },
+      },
+      handlers = {
+        ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = border }),
+        ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = border }),
+      },
+      border = {
+        { "┌", "FloatBorder" },
+        { "─", "FloatBorder" },
+        { "┐", "FloatBorder" },
+        { "│", "FloatBorder" },
+        { "┘", "FloatBorder" },
+        { "─", "FloatBorder" },
+        { "└", "FloatBorder" },
+        { "│", "FloatBorder" },
       },
     },
   },
